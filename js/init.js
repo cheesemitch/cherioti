@@ -6,6 +6,12 @@
     $('.parallax').parallax();
     $('.carousel').carousel();
     $('.materialboxed').materialbox();
+    
+    //Smooth Scroll
+    $('a').click(function(){
+        $('html, body').animate({
+            scrollTop: $( $(this).attr('href')).offset().top
+        },800)});
 
   }); // end of document ready
 })(jQuery); // end of jQuery name space
